@@ -1,5 +1,5 @@
 const {instrument} = require('@socket.io/admin-ui')
-const io = require('socket.io')(8000,{
+const io = require('socket.io')(process.env.PORT ||8000,{
     cors: {
         origin: ["http://localhost:3000","https://admin.socket.io","https://festive-archimedes-a9d181.netlify.app"]
     }
