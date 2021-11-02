@@ -12,7 +12,7 @@ import Waiting from './components/Waiting';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
-const socket = io('http://localhost:8000')
+const socket = io('https://pacific-lake-05054.herokuapp.com')
 
 function App() {
 
