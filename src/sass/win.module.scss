@@ -1,0 +1,18 @@
+$bg : rgba(49, 46, 43, 1);
+$primary : white;
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $primary;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}

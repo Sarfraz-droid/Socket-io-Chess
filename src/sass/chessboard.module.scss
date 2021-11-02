@@ -1,0 +1,71 @@
+.chessboard{
+    border: 6px solid rgb(255, 255, 255);
+    display: inline-block;
+    // padding: 5px;
+    border-radius:10px;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.chesssection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.chessbox{
+    height: 4vw;
+    width: 4vw;
+    background-color: rgb(109, 76, 28);
+}
+
+.chesssection:nth-child(odd){
+    .chessbox:nth-child(odd){
+        background-color: rgb(248, 185, 125);
+    }
+}
+
+.chesssection:nth-child(even) {
+    .chessbox:nth-child(even){
+        background-color: rgb(248, 185, 125);
+    }
+}
+
+.chesspiece{
+    z-index: 2;
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+.marker{
+    margin-top: 0px;
+    height: 4vw;
+    margin-left: 0px !important;
+    width: 4vw;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    pointer-events: none;
+    img{
+        width: 30%;
+        opacity: 0.6;    
+        filter: brightness(0.8);
+    }
+
+    .enemy{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(24, 177, 105);
+    }
+    .attack{
+        width: 100%;
+    }
+}
+
+.chessletter{
+    padding-top: 70vh;
+}
