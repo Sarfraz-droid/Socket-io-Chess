@@ -1,5 +1,8 @@
-// const {instrument} = require('@socket.io/admin-ui')
-const io = require('socket.io')(process.env.PORT,{
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const io = require('socket.io')(server,{
     cors: {
         origin: "https://festive-archimedes-a9d181.netlify.app",
         methods: ["GET", "POST"]  
@@ -108,5 +111,11 @@ io.on('connection', socket => {
 })
 
 // instrument(io,{auth: false})
+app.get('/', (req, res) => {
+    res.send("Hello");
+});
 
 
+server.listen(process.env.PORT || 3000, () => {
+    console.log('listening on port 3000');
+});
